@@ -5,4 +5,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="loading_items_pls_wait">Carregando produtos, por favor aguarde!!!</string>
+
+    <string name="error_loading_items">Algo deu errado ao carregar os produtos, por favor contate o administrador.</string>
 </resources>

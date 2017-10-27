@@ -6,16 +6,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class ItemAdapter{
-    /*extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>*/
+import comcesar1287.github.www.ssimperium.R;
+import comcesar1287.github.www.ssimperium.controller.domain.Item;
+import comcesar1287.github.www.ssimperium.controller.interfaces.RecyclerViewOnClickListenerHack;
 
+public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder>{
 
-    /*private List<Item> mList;
+    private List<Item> mList;
     private LayoutInflater mLayoutInflater;
     private RecyclerViewOnClickListenerHack mRecyclerViewOnClickListenerHack;
     private Context c;
@@ -29,7 +32,7 @@ public class ItemAdapter{
     @Override
     public ItemAdapter.MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
 
-        /*View v = mLayoutInflater.inflate(R.layout.item_category, viewGroup, false);
+        View v = mLayoutInflater.inflate(R.layout.item_item, viewGroup, false);
         return new MyViewHolder(v);
     }
 
@@ -37,8 +40,11 @@ public class ItemAdapter{
     public void onBindViewHolder(MyViewHolder myViewHolder, int position) {
 
         Glide.with(c)
-                .load(mList.get((position)).getIcon())
-                .into(myViewHolder.iconCategorie);
+                .load(mList.get((position)).getPhoto())
+                .into(myViewHolder.itemPhoto);
+
+        myViewHolder.itemName.setText(mList.get(position).getName());
+        myViewHolder.itemPrice.setText(mList.get(position).getPrice());
     }
 
     @Override
@@ -48,14 +54,17 @@ public class ItemAdapter{
 
     public void setRecyclerViewOnClickListenerHack(RecyclerViewOnClickListenerHack r){
         mRecyclerViewOnClickListenerHack = r;
-    }*/
+    }
 
-    //class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener /*View.OnCreateContextMenuListener*/{
-        /*ImageView iconCategorie;
+    class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener /*View.OnCreateContextMenuListener*/{
+        ImageView itemPhoto;
+        TextView itemName, itemPrice;
 
         MyViewHolder(View itemView) {
             super(itemView);
-            iconCategorie = (ImageView) itemView.findViewById(R.id.categorie_icon);
+            itemPhoto = itemView.findViewById(R.id.item_photo);
+            itemName = itemView.findViewById(R.id.item_name);
+            itemPrice = itemView.findViewById(R.id.item_price);
 
             itemView.setOnClickListener(this);
         }
@@ -66,5 +75,5 @@ public class ItemAdapter{
                 mRecyclerViewOnClickListenerHack.onClickListener(v, getAdapterPosition());
             }
         }
-    }*/
+    }
 }

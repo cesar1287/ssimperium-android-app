@@ -1,18 +1,15 @@
 package comcesar1287.github.www.ssimperium.controller.domain;
 
-import android.net.Uri;
-
 public class Item {
 
-    /*private String name;
-    private Uri icon;
+    private String photo, name, price;
 
-    public Uri getIcon() {
-        return icon;
+    public String getPhoto() {
+        return photo;
     }
 
-    public void setIcon(Uri icon) {
-        this.icon = icon;
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 
     public String getName() {
@@ -21,5 +18,14 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
-    }*/
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
 }
+

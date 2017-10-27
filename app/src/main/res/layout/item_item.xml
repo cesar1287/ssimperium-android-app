@@ -1,29 +1,45 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="129dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="?android:attr/selectableItemBackground"
-    android:layout_marginTop="5dp"
-    android:layout_marginLeft="5dp"
-    android:layout_marginStart="5dp"
-    android:layout_marginEnd="5dp"
-    android:layout_marginRight="5dp">
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
 
-    <android.support.v7.widget.CardView
-        android:layout_width="124dp"
-        android:layout_height="124dp"
-        android:layout_centerHorizontal="true"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="5dp">
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/item_photo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"/>
 
-        <ImageView
-            android:id="@+id/categorie_icon"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:adjustViewBounds="true"
-            android:layout_gravity="center"
-            android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/item_name"
+        android:text="Calça Jeans"
+        android:textSize="17sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_photo"
+        android:layout_centerHorizontal="true"/>
 
-    </android.support.v7.widget.CardView>
+    <TextView
+        android:id="@+id/item_rs"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:text="R$"
+        android:textSize="17sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_name"
+        android:layout_alignLeft="@+id/item_photo"/>
+
+    <TextView
+        android:id="@+id/item_price"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="69,99"
+        android:textSize="17sp"
+        android:layout_below="@+id/item_name"
+        android:layout_toRightOf="@id/item_rs"
+        android:layout_toEndOf="@id/item_rs"/>
 
 </RelativeLayout>
